@@ -4,7 +4,7 @@ close all;
 clc;
 
 HOME = pwd;
-addpath([HOME '/../../input']);
+addpath([HOME '/input']);
 addpath([HOME '/Tools']);
 
 % Model
@@ -14,7 +14,8 @@ addpath([HOME '/Tools']);
 %load(model_name);
 
 % Construct new model
-inputModel
+% inputModel
+customModel
 
 %%%%%%%%%%%%%%%%%%% Computation area %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% Part that can be modified %%%%%%%%%%%%%%%%%%%%%%%
@@ -22,7 +23,7 @@ inputModel
 latLim =    [-89.5 89.5 1];  % [deg] min latitude, max latitude, resolution latitude (preferable similar to latitude)
 lonLim =    [-180 180 1];% [deg] min longitude, max longitude, resolution longitude (preferable similar to latitude)
 height =    225000.0; % height of computation above spheroid
-SHbounds =  [0 179]; % Truncation settings: lower limit, upper limit SH-coefficients used
+SHbounds =  [0 100]; % Truncation settings: lower limit, upper limit SH-coefficients used
 
 %%%%%%%%%%%%%% Part that can be modified %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -32,7 +33,7 @@ tic;
 [V] = model_SH_analysis(Model);
 toc
 
-save(['../../output/' Model.name '.mat'],'V')
+save(['output/' Model.name '.mat'],'V')
 
 %% Global Spherical Harmonic Synthesis
 
@@ -42,5 +43,7 @@ toc
 
 %% Save data
 
-DATE = datestr(now);
-save(['../../output/data_' Model.name '_' num2str(SHbounds(1)) '_' num2str(SHbounds(2)) '_' DATE '.mat'],'data')
+save("output/" + Model.name + "_field.mat", "data");
+
+% DATE = datestr(now);
+% save(['output/data_' Model.name '_' num2str(SHbounds(1)) '_' num2str(SHbounds(2)) '_' DATE '.mat'],'data')

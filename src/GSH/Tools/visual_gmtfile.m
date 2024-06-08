@@ -13,6 +13,7 @@ if nargin == 2
     file_type = 'block';    
 end
 
+disp(file_type);
 d = load(filename);
 
 if strcmp(file_type,'block')
@@ -29,12 +30,12 @@ lon = Lon(1,:);
 lats = Lat(:,1);
 lon = lon - 180;
 
-load coast;
+% load coast;
 
 figure;
 hold on
 imagesc(lon,lats,(B));c=colorbar; 
-plot(long,lat,'k');
+% plot(lon,lats,'k');
 xlim([min(lon) max(lon)])
 ylim([min(lats) max(lats)])
 hold off

@@ -19,53 +19,53 @@ Model.nmax = 179;
 Model.correct_depth = 0;
 
 % % Topo layer
-Model.l1.bound = [HOME '/../../input/crust1.bd1.gmt'];
-Model.l1.dens  = [HOME '/../../input/crust1.rho1.gmt'];
+Model.l1.bound = [HOME '/input/crust1.bd1.gmt'];
+Model.l1.dens  = [HOME '/input/crust1.rho1.gmt'];
 % %Model.l1.alpha =
 
-% Bath layer
-Model.l2.bound = [HOME '/../../input/crust1.bd2.gmt'];
-Model.l2.dens  = [HOME '/../../input/crust1.rho2.gmt'];
+% Bath layer [Equivalent Earth2014 - TBI]
+Model.l2.bound = [HOME '/input/crust1.bd2.gmt'];
+Model.l2.dens  = [HOME '/input/crust1.rho2.gmt'];
 % %Model.l2.alpha =
 %
 % % Sediment layer
-Model.l3.bound = [HOME '/../../input/crust1.bd3.gmt'];
-Model.l3.dens  = [HOME '/../../input/crust1.rho3.gmt'];
+Model.l3.bound = [HOME '/input/crust1.bd3.gmt'];
+Model.l3.dens  = [HOME '/input/crust1.rho3.gmt'];
 % %Model.l3.alpha =
 %
 % %Upper crustal layer
-Model.l4.bound = [HOME '/../../input/crust1.bd4.gmt'];
-Model.l4.dens  = [HOME '/../../input/crust1.rho4.gmt'];
+Model.l4.bound = [HOME '/input/crust1.bd4.gmt'];
+Model.l4.dens  = [HOME '/input/crust1.rho4.gmt'];
 % %Model.l4.alpha =
 %
 % % Middle crustal layer
-Model.l5.bound = [HOME '/../../input/crust1.bd5.gmt'];
-Model.l5.dens  = [HOME '/../../input/crust1.rho5.gmt'];
+Model.l5.bound = [HOME '/input/crust1.bd5.gmt'];
+Model.l5.dens  = [HOME '/input/crust1.rho5.gmt'];
 % %Model.l5.alpha =
 %
 % % Lower crustal layer
-Model.l6.bound = [HOME '/../../input/crust1.bd6.gmt'];
-Model.l6.dens  = [HOME '/../../input/crust1.rho6.gmt'];
+Model.l6.bound = [HOME '/input/crust1.bd6.gmt'];
+Model.l6.dens  = [HOME '/input/crust1.rho6.gmt'];
 % %Model.l6.alpha =
 %
 % % Lower crustal body layer
-Model.l7.bound = [HOME '/../../input/crust1.bd7.gmt'];
-Model.l7.dens  = [HOME '/../../input/crust1.rho7.gmt'];
+Model.l7.bound = [HOME '/input/crust1.bd7.gmt'];
+Model.l7.dens  = [HOME '/input/crust1.rho7.gmt'];
 % %Model.l7.alpha =
 %
 % % Lithosphere layer
-Model.l8.bound = [HOME '/../../input/crust1.bd8.gmt'];
-Model.l8.dens  = [HOME '/../../input/crust1.rho8.gmt'];
+Model.l8.bound = [HOME '/input/crust1.bd8.gmt'];
+Model.l8.dens  = [HOME '/input/crust1.rho8.gmt'];
 % %Model.l8.alpha =
 %
 % % Asthenosphere crustal layer
-Model.l9.bound = [HOME '/../../input/crust1.bd9.gmt'];
+Model.l9.bound = [HOME '/input/crust1.bd9.gmt'];
 Model.l9.dens  = 3300;
 % %Model.l9.alpha =
 %
 % % Bottom
-Model.l10.bound = [HOME '/../../input/crust1.100km.gmt'];
+Model.l10.bound = [HOME '/input/crust1.100km.gmt'];
 
 % Save model in .mat file for use of the new software
 
-save([HOME '/../../input/' Model.name '.mat'],'Model')
+save([HOME '/input/' Model.name '.mat'],'Model')
